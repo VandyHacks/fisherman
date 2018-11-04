@@ -1,0 +1,26 @@
+{
+  "name": "fisherman",
+  "version": "1.0.0",
+  "description": "Detect fishy hackathon submissions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VandyHacks/fisherman.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VandyHacks/fisherman/issues"
+  },
+  "homepage": "https://github.com/VandyHacks/fisherman#readme",
+  "dependencies": {
+    "csvtojson": "^2.0.8",
+    "node-fetch": "^2.2.0",
+    "repo-first-commit": "^1.0.0",
+    "sleep-promise": "^8.0.1"
+  }
+}
