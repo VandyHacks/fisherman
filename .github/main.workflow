@@ -1,9 +1,9 @@
 workflow "on package.json change, do something" {
-  on = "pull_request"
-  resolves = ["branch cleanup"]
+  on = "push"
+  resolves = ["detect dependency changes"]
 }
 
-action "dependency change detector" {
+action "detect dependency changes" {
   uses = "bencooper222/check-for-node-dep-changes@master"
   secrets = ["GITHUB_TOKEN"]
 }
