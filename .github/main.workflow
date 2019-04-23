@@ -1,6 +1,6 @@
 workflow "on package.json change, do something" {
   on = "push"
-  resolves = ["detect dependency changes"]
+  resolves = ["post message"]
 }
 
 action "detect dependency changes" {
@@ -8,11 +8,11 @@ action "detect dependency changes" {
   secrets = ["GITHUB_TOKEN"]
 }
 
-action "Post message to Slack" {
-  needs = "detect dependency changes"
+action "post message" {
+  needs = ["detect dependency changes"]
   uses = "pullreminders/slack-github-action@master"
   secrets = [
     "SLACK_BOT_TOKEN",
   ]
-  args = "{\"channel\":\"C9S0DF3BR\",\"text\":"Hello world"}"
+  args = "{\"channel\": \"C9S0DF3BR\", \"text\": \"Dependencies have been changed; `npm i` is recommended\"}}"
 }
