@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/VandyHacks/fisherman#readme",
   "dependencies": {
+    "base-64": "^0.1.0",
     "csvtojson": "^2.0.8",
     "node-fetch": "^2.2.0",
     "repo-first-commit": "^1.0.0",
