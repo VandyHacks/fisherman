@@ -1,4 +1,7 @@
 # fisherman
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/VandyHacks/fisherman.svg)](https://greenkeeper.io/)
+
 Detect fishy hackathon submissions
 
 Methods
