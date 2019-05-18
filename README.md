@@ -14,3 +14,4 @@ Marks repository as "fishy" (read: suspicious) if any of below are met:
 Disclaimer: There will obviously be a lot of false positives in repositories that are marked as fishy. However, the goal of this project is not to judge which projects are fishy, but instead highlight *potentially* suspicious repos for further investigation by **humans**.
 
 
+
