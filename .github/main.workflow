@@ -4,7 +4,7 @@ workflow "Create Pull Request" {
 }
 
 action "Create New Pull Request" {
-  uses = "vsoch/pull-request-action@master"
+  uses = "bencooper222/pull-request-action@master"
   secrets = [
     "GITHUB_TOKEN"
   ]
