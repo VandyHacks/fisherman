@@ -3,7 +3,6 @@ Detect fishy hackathon submissions
 
 Methods
 ---
-
 Uses [Github API](https://developer.github.com/v3/repos/statistics/)
 
 Marks repository as "fishy" (read: suspicious) if any of below are met:
