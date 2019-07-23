@@ -1,20 +1,19 @@
-workflow "on package.json change, do something" {
+workflow "Create Pull Request" {
   on = "push"
-  resolves = ["post message"]
+  resolves = "Create New Pull Request"
 }
 
-action "detect dependency changes" {
-  uses = "bencooper222/check-for-node-dep-changes@master"
-  secrets = ["GITHUB_TOKEN"]
-}
-
-action "post message" {
-  needs = ["detect dependency changes"]
-  uses = "pullreminders/slack-github-action@master"
+action "Create New Pull Request" {
+  uses = "bencooper222/pull-request-action@master"
   secrets = [
-    "SLACK_BOT_TOKEN",
+    "GITHUB_TOKEN"
   ]
-  args = "{\"channel\": \"C9S0DF3BR\", \"text\": \"Dependencies have been changed; `npm i` is recommended\"}}"
+  env = {
+    BRANCH_PREFIX = ""
+    PULL_REQUEST_BRANCH = "master"
+    PULL_REQUEST_DRAFT = "true"
+    PULL_REQUEST_TITLE = "Override ${BRANCH}"
+  }
 }
 
 
