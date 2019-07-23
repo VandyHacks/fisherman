@@ -16,3 +16,14 @@ action "post message" {
   ]
   args = "{\"channel\": \"C9S0DF3BR\", \"text\": \"Dependencies have been changed; `npm i` is recommended\"}}"
 }
+
+
+workflow "Automatic Rebase" {
+  on = "issue_comment"
+  resolves = "Rebase"
+}
+
+action "Rebase" {
+  uses = "docker://cirrusactions/rebase:latest"
+  secrets = ["GITHUB_TOKEN"]
+}
